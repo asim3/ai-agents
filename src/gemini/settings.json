@@ -1,0 +1,15 @@
+{
+  "theme": "GitHub",
+  "autoAccept": false,
+  "sandbox": "docker",
+  "vimMode": true,
+  "checkpointing": {
+    "enabled": true
+  },
+  "fileFiltering": {
+    "respectGitIgnore": true
+  },
+  "includeDirectories": ["../shared-library", "~/common-utils"]
+}
+
+// https://geminicli.com/docs/reference/configuration/

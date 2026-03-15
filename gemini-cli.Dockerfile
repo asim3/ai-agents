@@ -4,8 +4,12 @@ ENV TZ=Asia/Riyadh
 
 RUN npm install -g @google/gemini-cli
 
+COPY ./src/gemini/settings.json /home/node/.gemini/settings.json
+
 USER node
 
-ENTRYPOINT [ "/bin/sh", "-c" , "gemini" ]
+WORKDIR /home/node/
 
-CMD [ "" ]
+ENTRYPOINT [ "/bin/sh", "-c" ]
+
+CMD [ "gemini" ]

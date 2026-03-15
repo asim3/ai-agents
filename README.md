@@ -6,8 +6,6 @@
 docker image rm asim3/claude-code:latest; docker container run -it --rm asim3/claude-code:latest
 
 docker image rm asim3/gemini-cli:latest;  docker container run -it --rm asim3/gemini-cli:latest
-
-claude-code.Dockerfile
 ```
 
 
