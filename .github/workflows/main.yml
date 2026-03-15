@@ -19,7 +19,9 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
-    - name: Build and push Docker image
+
+
+    - name: Build and push gemini-cli Docker image
       uses: docker/build-push-action@v6
       with:
         context: .
@@ -28,3 +30,13 @@ jobs:
         tags: |
           asim3/gemini-cli:latest
           asim3/gemini-cli:${{ github.ref_name }}
+
+    - name: Build and push claude-code Docker image
+      uses: docker/build-push-action@v6
+      with:
+        context: .
+        file: ./claude-code.Dockerfile
+        push: true
+        tags: |
+          asim3/claude-code:latest
+          asim3/claude-code:${{ github.ref_name }}
